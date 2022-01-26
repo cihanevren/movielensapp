@@ -1,0 +1,119 @@
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $("#searchInput").keypress(function(e) {
+          if (e.which == 13) {
+            var searchTerm = $("#searchInput").val();
+            var link = '/dashboard/recommend?userId=' + searchTerm;
+            window.location = link;
+          }
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <a href="/dashboard">
+          <h1 class="text-center">MOVIES</h1>
+        </a>
+        <a href="/dashboard/recommend">
+          <h1 class="text-center">RECOMMENDATION</h1>
+        </a>
+        <img src="data:image/png;base64,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" width="940" height="300" />
+        </br>
+        </br>
+        </br>
+        </br>
+        <div class="border mb-3">
+          <h2 class="text-center">TOP 10</h2>
+          <ul class="nav justify-content-center">
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=comedy">Comedy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=action">Action</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=children">Children</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=fantasy">Fantasy</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=adventure">Adventure</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=musical">Musical</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=animation">Animation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=romance">Romance</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=thriller">Thriller</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=film-noir">Film-Noir</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=mystery">Mystery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=western">Western</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=war">War</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=documentary">Documentary</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=sci-fi">Sci-Fi</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=crime">Crime</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=horror">Horror</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/dashboard/top10?genre=drama">Drama</a>
+            </li>
+          </ul>
+        </div>
+        <div class="form-group pull-right">
+          <input type="number" id="searchInput" class="search form-control" placeholder="To recommend movies type userID between 1..162541">
+        </div>
+        <span class="counter pull-right"></span>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th scope="col">USERID</th>
+              <th scope="col">MOVIEID</th>
+              <th scope="col">MOVIE TITLE</th>
+              <th scope="col">MOVIE GENRES</th>
+              <th scope="col">RATING</th>
+            </tr>
+          </thead>
+          <tbody> {% for item in data %} <tr>
+              <td>{{item.userId}}</td>
+              <td>{{item.movieId}}</td>
+              <td>{{item.movie.title}}</td>
+              <td>{{item.movie.genres}}</td>
+              <td>{{item.rating}}</td>
+            </tr> {% endfor %} </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
