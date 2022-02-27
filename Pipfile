@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+django-debug-toolbar = "*"
+djongo = "*"
+pytz = "~=2018.5"
+pymongo = "~=3.12.3"
+mongoengine = "==0.23.1"
+django = "==3.2.10"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
